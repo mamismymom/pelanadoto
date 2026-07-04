@@ -21,13 +21,11 @@
         .app-container {
             position: relative;
             width: 100%;
-            /* KUNCI PERBAIKAN: Lebar maksimal dikalkulasi berdasarkan 16/9 dari TINGGI layar */
             max-width: calc(100vh * (16 / 9)); 
             aspect-ratio: 16 / 9;
             background-color: #e5f3fa; 
             overflow: hidden;
-            /* Menambahkan sedikit box-shadow agar terlihat batasnya jika di-embed */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            /* Efek bayangan (box-shadow) telah dihapus agar menyatu dengan background */
         }
 
         /* Pengaturan Standar Slide & Efek Transisi "Pop" 300ms */
@@ -184,6 +182,7 @@
                 }
             }
 
+            // JAWABAN B BENAR PADA KEYBOARD
             if (slide1Active && !popupActive) {
                 if (key === 'a') {
                     goToSlide('slide2a');
