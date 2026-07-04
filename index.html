@@ -14,20 +14,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Background luar dibuat gelap agar terlihat batas rasionya (opsional, bisa diganti transparent untuk Google Sites) */
-            background-color: transparent; 
+            /* Latar belakang luar kanvas diubah sesuai permintaan */
+            background-color: #d9f0fe; 
         }
 
         /* Container Utama - Memaksa Rasio 16:9 dan Fit to Screen (Tidak Terpotong) */
         .app-container {
             position: relative;
             width: 100%;
-            /* KUNCI PERBAIKAN: Lebar maksimal dikalkulasi berdasarkan 16/9 dari TINGGI layar */
             max-width: calc(100vh * (16 / 9)); 
             aspect-ratio: 16 / 9;
             background-color: #e5f3fa; 
             overflow: hidden;
-            /* Menambahkan sedikit box-shadow agar terlihat batasnya jika di-embed */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
